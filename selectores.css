@@ -1,0 +1,43 @@
+/* Selector universal */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Selector por ID */
+#p1 {
+    font-size: 18px;
+}
+
+/* Selector por etiqueta */
+p {
+    border: 1px solid red;
+}
+
+/* Selector por atributo */
+div[class] {
+    margin-left: 20px;
+}
+
+div[class="prueba"] {
+    color: pink;
+}
+
+div[class|="prueba"] {
+    background-color: gray;
+}
+
+div[class$="prueba"] {
+    line-height: 30px;
+}
+
+div[class~="prueba"] {
+    letter-spacing: 5px;
+}
+
+div[class^="prueba-"] {
+    border: solid 1px orange;
+}
+
+div[class*="clase"] {
+    text-decoration: underline;
+}

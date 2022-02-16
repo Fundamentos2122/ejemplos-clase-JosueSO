@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.cita {
+            background-color: lightcoral;
+        }
+
+        .cita {
+            background-color: aqua;
+        }
+
+        button:hover {
+            background-color: darkred;
+            color: white;
+        }
+
+        input[type="checkbox"]:checked {
+            box-shadow: green 4px 4px 2px;
+        }
+
+        input[type="text"]:focus {
+            border-width: 5px;
+        }
+
+        p::first-letter {
+            font-size: 24px;
+        }
+
+        p::first-letter::selection {
+            background-color: yellow;
+        }
+
+        p::first-line {
+            font-style: italic;
+        }
+
+        p::selection {
+            background-color: yellow;
+        }
+
+        p.cita::before {
+            content: "\"";
+        }
+
+        p.cita::after {
+            content: "\"";
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Nombre">
+        <br>
+        <input type="checkbox" >
+        <label>Check aquí</label>
+        <br>
+        <button>Enviar</button>
+    </form>
+
+    <p class="cita">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab quod quae totam iste temporibus repellat eos excepturi voluptatem harum ipsum alias ea fuga, maiores atque quo animi eaque in!</p>
+
+    <p class="cita">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab quod quae totam iste temporibus repellat eos excepturi voluptatem harum ipsum alias ea fuga, maiores atque quo animi eaque in!</p>
+
+    <div class="cita">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus iusto magnam hic veritatis sed doloribus laboriosam incidunt in perspiciatis dolores dolor quod itaque, vero minus porro! Quaerat, dolorem eligendi.</div>
+</body>
+</html>
