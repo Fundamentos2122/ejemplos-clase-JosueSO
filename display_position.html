@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: 1px solid black;
+        }
+
+        div, p {
+            /* display: inline; */
+        }
+
+        img {
+            display: block;
+            position: sticky;
+            top: 0;
+        }
+
+        a {
+            display: inline-block;
+            /* padding: 20px; */
+        }
+
+        .p-relative {
+            position: relative;
+
+            height: 200px;
+            background-color: aquamarine;
+        }
+
+        .p-absolute {
+            display: block;
+            border-color: red;
+            position: absolute;
+            top: 0px;
+            margin: 0;
+        }
+
+        .p-fixed {
+            width: 200px;
+            position: fixed;
+            background-color: bisque;
+            right: 0;
+            top: 400px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ipsum aspernatur ea in rerum, nobis qui pariatur dignissimos totam odit quas repudiandae eius omnis dolorum sint. Unde maiores quibusdam ipsa?
+    </div>
+
+    <div class="p-fixed">
+        Elemento fijo
+    </div>
+
+    <p>Hola mundo</p>
+
+    <a href="">Link</a>
+    <img src="https://picsum.photos/200/300" alt="">
+
+    <br><br><br><br><br>
+
+    <div class="p-relative">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore soluta omnis officia, harum quis ea officiis laudantium voluptate ad? Quos neque, porro consequatur nam velit saepe error iure itaque culpa? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia id fugit aliquam unde. Unde alias veniam repudiandae. Atque ducimus veritatis consequuntur iste dolore, voluptatem sunt corporis voluptatibus quibusdam rerum commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quibusdam neque a sequi saepe vitae maiores dolorum, architecto voluptatem aliquid consequuntur magnam iure illo porro non, suscipit eius vero eum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis sit in placeat vel consequatur qui repellendus reprehenderit, nobis ad voluptas. Ipsum praesentium hic nobis odio illum. Dolorum veniam cupiditate optio! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis eos distinctio optio nihil, quis vitae magnam cum animi assumenda reprehenderit enim saepe perspiciatis rem tempora hic itaque quod atque porro. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta itaque a quis, tempora dolores, quasi earum maxime quisquam incidunt labore perferendis culpa asperiores id eaque cumque, eligendi totam vitae autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore animi nihil sed? Maxime illo ipsam facere laudantium minus dolores iste nostrum expedita fugiat sint incidunt, harum beatae similique accusamus? Laboriosam?</p>
+
+        <a href="" class="p-absolute">Hola mundo</a>
+    </div>
+    
+</body>
+</html>
