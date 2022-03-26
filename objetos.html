@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { 
+            box-sizing: border-box; 
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        html, body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+            margin: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: lightgrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 1em;
+            border-radius: 0.5em;
+            box-shadow: 0 0 10px darkgray;
+        }
+
+        h2 {
+            margin-bottom: 0.75em;
+        }
+
+        .input-group {
+            margin-bottom: 1em;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.25em;
+        }
+
+        .form-control {
+            display: block;
+            padding: 0.25em 0.5em;
+            font-size: 1rem;
+            border-radius: 0.25em;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            font-size: 1rem;
+            background-color: black;
+            color: white;
+            padding-block: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Iniciar Sesión</h2>
+        <form autocomplete="off" id="form_login">
+            <div class="input-group">
+                <label for="username">Nombre de usuario</label>
+                <input type="text" name="username" class="form-control">
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" class="form-control">
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <script>
+        console.log(localStorage.login_date);
+
+
+        var form_login = document.getElementById("form_login");
+
+        form_login.addEventListener("submit", enviaForm);
+
+        function enviaForm(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            var login_data = {
+                username: e.target["username"].value,
+                password: e.target["password"].value
+            };
+
+            var login_string = JSON.stringify(login_data);
+
+            localStorage.setItem("login_date", login_string);
+        }
+    </script>
+</body>
+</html>

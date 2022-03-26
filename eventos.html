@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="saludo"></div>
+
+    <button id="nuevo_saludo">Nuevo saludo</button>
+
+    <button onclick="nuevoParrafo()">Agrega parrafo</button>
+
+    <p>Párrafo original</p>
+
+    <form>
+        <select id="mensaje">
+            <option value="Mensaje 1">Mensaje 1</option>
+            <option value="Mensaje 2">Mensaje 2</option>
+            <option value="Mensaje 3">Mensaje 3</option>
+        </select>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", saludar);
+
+        let divSaludo = document.getElementById("saludo");
+        
+        function saludar() {
+            divSaludo.innerText = "Hola mundo";
+        }
+
+        let btnSaludo = document.getElementById("nuevo_saludo");
+
+        btnSaludo.addEventListener("click", function() {
+            divSaludo.innerText = "Nuevo saludo";
+        });
+
+        let parrafos = document.getElementsByTagName("p");
+
+        for(i = 0; i < parrafos.length; i++) {
+            parrafos[i].addEventListener("mouseover", function() {
+                this.style.color = "red";
+            });
+
+            parrafos[i].addEventListener("mouseout", function() {
+                this.style.color = "black";
+            });
+        };
+
+        function nuevoParrafo() {
+            let p = document.createElement("p");
+
+            let text = document.createTextNode("Nuevo párrafo");
+            
+            p.appendChild(text);
+
+            document.body.appendChild(p);
+        }
+
+        let inputMensaje = document.getElementById("mensaje");
+
+        inputMensaje.addEventListener("change", function() {
+            console.log(this.value);
+        });
+    </script>
+</body>
+</html>
