@@ -7,6 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+    <h3>Formulario GET</h3>
+    <form action="" method="get">
+        <input type="text" name="param1">
+        <br>
+        <input type="text" name="param2">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h3>Formulario POST</h3>
+    <form action="https://jsonplaceholder.typicode.com/posts" method="post">
+        <input type="text" name="title">
+        <br>
+        <input type="text" name="body">
+        <br>
+        <input type="number" name="userId">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
     <script>
         // var xhttp = new XMLHttpRequest();
     
@@ -27,24 +47,51 @@
 
         // xhttp.send();
 
-        var xhttp = new XMLHttpRequest();
+        // var xhttp = new XMLHttpRequest();
     
-        xhttp.open("GET", "obj.json", true);
+        // xhttp.open("GET", "obj.json", true);
         
-        xhttp.onreadystatechange = function() {
-            if (xhttp.readyState === 4) {
-                if(xhttp.status === 200) {
-                    let json = JSON.parse(xhttp.responseText);
+        // xhttp.onreadystatechange = function() {
+        //     if (xhttp.readyState === 4) {
+        //         if(xhttp.status === 200) {
+        //             let json = JSON.parse(xhttp.responseText);
 
-                    console.log(json);
-                }
-                else {
-                    console.log("Error en la solicitud");
-                }
-            }
-        };
+        //             console.log(json);
+        //         }
+        //         else {
+        //             console.log("Error en la solicitud");
+        //         }
+        //     }
+        // };
 
-        xhttp.send();
+        // xhttp.send();
+
+        // var xhttp = new XMLHttpRequest();
+    
+        // xhttp.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
+        
+        // xhttp.onreadystatechange = function() {
+        //     if (xhttp.readyState === 4) {
+        //         if(xhttp.status === 201) {
+        //             let json = JSON.parse(xhttp.responseText);
+
+        //             console.log(json);
+        //         }
+        //         else {
+        //             console.log("Error en la solicitud");
+        //         }
+        //     }
+        // };
+
+        // let data = {
+        //     title: 'foo',
+        //     body: 'bar',
+        //     userId: 1,
+        // };
+
+        // xhttp.setRequestHeader("Content-type", "application/json");
+
+        // xhttp.send(JSON.stringify(data));
     </script>
 </body>
 </html>
